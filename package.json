@@ -1,6 +1,6 @@
 {
   "name": "Datepicker",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Vue.js project",
   "author": "Jean Marc BRUNO <technique@edps.fr>",
   "scripts": {
@@ -14,7 +14,7 @@
     "babel-runtime": "^5.8.0",
     "moment": "^2.12.0",
     "moment-range": "^2.2.0",
-    "vue": "^1.0.18",
+    "vue": "^1.0.20",
     "vuex": "^0.6.2"
   },
   "devDependencies": {

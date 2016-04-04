@@ -179,7 +179,7 @@
   <div class="datepicker" v-if="visible" transition="datepicker-slide" @click.stop>
     <div class="datepicker__header">
       <div class="datepicker__year">
-        <span v-for="year in [year]" transition="slideh" :class"dayDirection">{{ year }}</span>
+        <span v-for="year in [year]" transition="slideh" :class="dayDirection">{{ year }}</span>
       </div>
       <div class="datepicker__date">
         <span v-for="date_formatted in [date_formatted]" transition="slideh" :class="dayDirection">{{ date_formatted }}</span>
