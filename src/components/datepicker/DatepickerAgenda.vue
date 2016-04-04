@@ -1,16 +1,19 @@
 <style lang="scss">
   $color-50 : #EFEBE9;
+  $color-100: #D7CCC8;
+  $color-200: #BCAAA4;
   $color-300: #A1887F;
   $color-400: #8D6E63;
   $color-500: #795548;
   $color-600: #6D4C41;
+  $color-900: #3E2723;
 
   $header-height: 80px;
-  $day-size: 41px;
+  $day-size: 35px;
 
   .datepicker {
     position: absolute;
-    width: 315px;
+    width: 273px;   // (35*7) + (2*14)
     top: 100%;
     z-index: 5;
     background-color: $color-50;
@@ -76,8 +79,8 @@
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 36px;
-    height: 36px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background-color: $color-600;
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -126,7 +129,15 @@
   .datepicker__next {
     float: right;
   }
+  .datepicker__nextm {
+    float: right;
+    left: 25px;
+  }
   .datepicker__prev {
+    float: left;
+  }
+  .datepicker__prevm {
+    left: -25px;
     float: left;
   }
   .datepicker__month {
@@ -153,8 +164,8 @@
     font-size: 16px;
     text-transform: uppercase;
     font-weight: 500;
-    min-width: 88px;
-    line-height: 36px;
+    min-width: 70px;
+    line-height: 30px;
     text-align: center;
     -webkit-appearance: none;
     transition: all 0.3s;
@@ -189,10 +200,22 @@
       <div class="datepicker__month">
         <span v-for="month in [month]" transition="slideh" :class="classDirection">{{ month.getFormatted() }}</span>
       </div>
-      <button class="datepicker__next" @click="nextMonth()">
+      <button class="datepicker__next" @click="nextYear()">
+        <svg viewBox="0 0 24 24">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path>
+          <path d="M6 6 4.59 7.41 9.17 12 4.59 16.59 6 18 12 12 z"></path>
+        </svg>
+      </button>
+      <button class="datepicker__nextm" @click="nextMonth()">
         <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
       </button>
-      <button class="datepicker__prev" @click='prevMonth()'>
+      <button class="datepicker__prev" @click='prevYear()'>
+        <svg viewBox="0 0 24 24">
+          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+          <path d="M 19.41 7.41 18 6 12 12 18 18 19.41 16.59 14.83 12 z"></path>
+        </svg>
+      </button>
+      <button class="datepicker__prevm" @click='prevMonth()'>
         <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
       </button>
     </div>
@@ -203,7 +226,7 @@
     </div>
     <div class="datepicker__days" :class="classWeeks">
       <div v-for="month in [month]" transition="slidev" :class="classDirection">
-        <div class="datepicker__day" v-bind:style="{width: (month.getWeekStart() * 41) + 'px'}">
+        <div class="datepicker__day" v-bind:style="{width: (month.getWeekStart() * 35) + 'px'}">
         </div>
         <div class="datepicker__day" @click="selectDate(day)" v-for="day in month.getDays()" :class="{selected: isSelected(day)}">
           <span class="datepicker__day__effect"></span>
@@ -267,6 +290,24 @@ export default {
       if (month < 0) {
         year -= 1
         month = 11
+      }
+      this.month = new Month(month, year)
+    },
+    nextYear () {
+      this.classDirection = 'direction-next'
+      let month = this.month.month
+      let year = this.month.year + 1
+      if (year > 3000) {
+        year = 3000
+      }
+      this.month = new Month(month, year)
+    },
+    prevYear () {
+      this.classDirection = 'direction-prev'
+      let month = this.month.month
+      let year = this.month.year - 1
+      if (year < 1970) {
+        year = 1970
       }
       this.month = new Month(month, year)
     },
