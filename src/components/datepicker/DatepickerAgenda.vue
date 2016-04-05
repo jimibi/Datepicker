@@ -1,12 +1,7 @@
 <style lang="scss">
-  $color-50 : #EFEBE9;
-  $color-100: #D7CCC8;
-  $color-200: #BCAAA4;
-  $color-300: #A1887F;
-  $color-400: #8D6E63;
-  $color-500: #795548;
-  $color-600: #6D4C41;
-  $color-900: #3E2723;
+
+@import '../../modules/colors';
+@import 'animations';
 
   $header-height: 80px;
   $day-size: 35px;
@@ -20,7 +15,7 @@
     box-shadow: 0 14px 45px rgba(0,0,0,0.25), 0 10px 18px rgba(0,0,0,0.22);
   }
   .datepicker__header {
-    background-color: $color-500;
+    background-color: $color-700;
     color: white;
     padding: 14px 10px 0 20px;
     height: $header-height;
@@ -183,7 +178,6 @@
     transform: translateY(-15px);
   }
 
-  @import 'animations';
 </style>
 
 <template>
