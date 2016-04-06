@@ -4,7 +4,7 @@
 Red, Pink, Purple, Deep_Purple, Indigo, Blue, Light_Blue, Cyan, Teal, Green,
 Light_Green, Lime, Yellow, Amber, Orange, Deep_Orange, Brown, Grey.
 */
-$theme: 'Teal';
+$theme: 'Indigo';
 @import '../../modules/colors';
 @import 'animations';
 

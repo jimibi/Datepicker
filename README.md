@@ -2,6 +2,9 @@
 
 > A Vue.js project
 
+![datepicker](http://img.ctrlv.in/img/16/04/06/5704e6da9d6c0.png)
+
+
 ## Build Setup
 
 ``` bash
