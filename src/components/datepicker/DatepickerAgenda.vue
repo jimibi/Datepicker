@@ -1,14 +1,21 @@
 <style lang="scss">
 
+/* Theme Material Design
+Red, Pink, Purple, Deep_Purple, Indigo, Blue, Light_Blue, Cyan, Teal, Green,
+Light_Green, Lime, Yellow, Amber, Orange, Deep_Orange, Brown, Grey.
+*/
+$theme: 'Teal';
 @import '../../modules/colors';
 @import 'animations';
 
-  $header-height: 80px;
   $day-size: 35px;
+  $day-margin: 14px;  // 14px min
+  $datepicker-width: ($day-size * 7) + ($day-margin * 2);
+  $header-height: 80px;
 
   .datepicker {
     position: absolute;
-    width: 273px;   // (35*7) + (2*14)
+    width: $datepicker-width;
     top: 100%;
     z-index: 5;
     background-color: $color-50;
@@ -17,7 +24,7 @@
   .datepicker__header {
     background-color: $color-700;
     color: white;
-    padding: 14px 10px 0 20px;
+    padding: $day-margin 10px 0 20px;
     height: $header-height;
   }
   .datepicker__year {
@@ -40,7 +47,7 @@
     line-height: 14px;
     font-weight: bold;
     color: rgba(0,0,0,0.8);
-    padding: 0 14px;
+    padding: 0 $day-margin;
   }
   .datepicker__weekday {
     float: left;
@@ -50,7 +57,7 @@
   .datepicker__days {
     position: relative;
     overflow: hidden;
-    margin: 14px 14px 0;
+    margin: $day-margin $day-margin 0;
     height: $day-size * 5;
     transition: height 0.3s;
     &.has-6-weeks {

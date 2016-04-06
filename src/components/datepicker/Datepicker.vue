@@ -8,7 +8,7 @@
   <div class="datepicker__container">
     <input type="text" value="{{ date_formatted }}" @click="showDatepicker">
     <input type="hidden" name="{{ name }}" value="{{ date_raw }}">
-    <datepicker-agenda :date="date" :visible="isVisible" @change="selectDate" @cancel="hideDatepicker"></datepicker-agenda>
+    <via-datepicker-agenda :date="date" :visible="isVisible" @change="selectDate" @cancel="hideDatepicker"></via-datepicker-agenda>
   </div>
 </template>
 
@@ -23,7 +23,7 @@ moment.locale(locale)
 
 export default {
   components: {
-    'datepicker-agenda': DatepickerAgendaComponent
+    'via-datepicker-agenda': DatepickerAgendaComponent
   },
   props: {
     value: {type: String, required: true},

@@ -1,4 +1,6 @@
-// Brown theme from Material Design
+// Theme from Material Design
+
+@if $theme == 'Brown' {
   $color-50 : #EFEBE9;  // Background
   $color-100: #D7CCC8;
   $color-200: #BCAAA4;
@@ -9,3 +11,305 @@
   $color-700: #5D4037;  //  Header Background
   $color-800: #4E342E;
   $color-900: #3E2723;
+}
+
+@if $theme == 'Red' {
+  $color-50  : #FFEBEE;
+  $color-100 : #FFCDD2;
+  $color-200 : #EF9A9A;
+  $color-300 : #E57373;
+  $color-400 : #EF5350;
+  $color-500 : #F44336;
+  $color-600 : #E53935;
+  $color-700 : #D32F2F;
+  $color-800 : #C62828;
+  $color-900 : #B71C1C;
+  $color-A100: #FF8A80;
+  $color-A200: #FF5252;
+  $color-A400: #FF1744;
+  $color-A700: #D50000;
+}
+
+// Pink
+@if $theme == 'Pink' {
+  $color-50  : #FCE4EC;
+  $color-100 : #F8BBD0;
+  $color-200 : #F48FB1;
+  $color-300 : #F06292;
+  $color-400 : #EC407A;
+  $color-500 : #E91E63;
+  $color-600 : #D81B60;
+  $color-700 : #C2185B;
+  $color-800 : #AD1457;
+  $color-900 : #880E4F;
+  $color-A100: #FF80AB;
+  $color-A200: #FF4081;
+  $color-A400: #F50057;
+  $color-A700: #C51162;
+}
+
+// Purple
+@if $theme == 'Purple' {
+  $color-50  : #F3E5F5;
+  $color-100 : #E1BEE7;
+  $color-200 : #CE93D8;
+  $color-300 : #BA68C8;
+  $color-400 : #AB47BC;
+  $color-500 : #9C27B0;
+  $color-600 : #8E24AA;
+  $color-700 : #7B1FA2;
+  $color-800 : #6A1B9A;
+  $color-900 : #4A148C;
+  $color-A100: #EA80FC;
+  $color-A200: #E040FB;
+  $color-A400: #D500F9;
+  $color-A700: #AA00FF;
+}
+
+// Deep_Purple
+@if $theme == 'Deep_Purple' {
+  $color-50  : #EDE7F6;
+  $color-100 : #D1C4E9;
+  $color-200 : #B39DDB;
+  $color-300 : #9575CD;
+  $color-400 : #7E57C2;
+  $color-500 : #673AB7;
+  $color-600 : #5E35B1;
+  $color-700 : #512DA8;
+  $color-800 : #4527A0;
+  $color-900 : #311B92;
+  $color-A100: #B388FF;
+  $color-A200: #7C4DFF;
+  $color-A400: #651FFF;
+  $color-A700: #6200EA;
+}
+
+@if $theme == 'Indigo' {
+  $color-50 : #E8EAF6;
+  $color-100: #C5CAE9;
+  $color-200: #9FA8DA;
+  $color-300: #7986CB;
+  $color-400: #5C6BC0;
+  $color-500: #3F51B5;
+  $color-600: #3949AB;
+  $color-700: #303F9F;
+  $color-800: #283593;
+  $color-900: #1A237E;
+  $color-A100: #8C9EFF;
+  $color-A200: #536DFE;
+  $color-A400: #3D5AFE;
+  $color-A700: #304FFE;
+}
+
+@if $theme == 'Blue' {
+  $color-50 : #E3F2FD;
+  $color-100: #BBDEFB;
+  $color-200: #90CAF9;
+  $color-300: #64B5F6;
+  $color-400: #42A5F5;
+  $color-500: #2196F3;
+  $color-600: #1E88E5;
+  $color-700: #1976D2;
+  $color-800: #1565C0;
+  $color-900: #0D47A1;
+  $color-A100: #82B1FF;
+  $color-A200: #448AFF;
+  $color-A400: #2979FF;
+  $color-A700: #2962FF;
+}
+
+@if $theme == 'Light_Blue' {
+  $color-50 : #E1F5FE;
+  $color-100: #B3E5FC;
+  $color-200: #81D4FA;
+  $color-300: #4FC3F7;
+  $color-400: #29B6F6;
+  $color-500: #03A9F4;
+  $color-600: #039BE5;
+  $color-700: #0288D1;
+  $color-800: #0277BD;
+  $color-900: #01579B;
+  $color-A100: #80D8FF;
+  $color-A200: #40C4FF;
+  $color-A400: #00B0FF;
+  $color-A700: #0091EA;
+}
+
+@if $theme == 'Cyan' {
+  $color-50 : #E0F7FA;
+  $color-100: #B2EBF2;
+  $color-200: #80DEEA;
+  $color-300: #4DD0E1;
+  $color-400: #26C6DA;
+  $color-500: #00BCD4;
+  $color-600: #00ACC1;
+  $color-700: #0097A7;
+  $color-800: #00838F;
+  $color-900: #006064;
+  $color-A100: #84FFFF;
+  $color-A200: #18FFFF;
+  $color-A400: #00E5FF;
+  $color-A700: #00B8D4;
+}
+
+@if $theme == 'Teal' {
+  $color-50 : #E0F2F1;
+  $color-100: #B2DFDB;
+  $color-200: #80CBC4;
+  $color-300: #4DB6AC;
+  $color-400: #26A69A;
+  $color-500: #009688;
+  $color-600: #00897B;
+  $color-700: #00796B;
+  $color-800: #00695C;
+  $color-900: #004D40;
+  $color-A100: #A7FFEB;
+  $color-A200: #64FFDA;
+  $color-A400: #1DE9B6;
+  $color-A700: #00BFA5;
+}
+
+@if $theme == 'Green' {
+  $color-50 : #E8F5E9;
+  $color-100: #C8E6C9;
+  $color-200: #A5D6A7;
+  $color-300: #81C784;
+  $color-400: #66BB6A;
+  $color-500: #4CAF50;
+  $color-600: #43A047;
+  $color-700: #388E3C;
+  $color-800: #2E7D32;
+  $color-900: #1B5E20;
+  $color-A100: #B9F6CA;
+  $color-A200: #69F0AE;
+  $color-A400: #00E676;
+  $color-A700: #00C853;
+}
+
+@if $theme == 'Light_Green' {
+  $color-50 : #F1F8E9;
+  $color-100: #DCEDC8;
+  $color-200: #C5E1A5;
+  $color-300: #AED581;
+  $color-400: #9CCC65;
+  $color-500: #8BC34A;
+  $color-600: #7CB342;
+  $color-700: #689F38;
+  $color-800: #558B2F;
+  $color-900: #33691E;
+  $color-A100: #CCFF90;
+  $color-A200: #B2FF59;
+  $color-A400: #76FF03;
+  $color-A700: #64DD17;
+}
+
+@if $theme == 'Lime' {
+  $color-50 : #F9FBE7;
+  $color-100: #F0F4C3;
+  $color-200: #E6EE9C;
+  $color-300: #DCE775;
+  $color-400: #D4E157;
+  $color-500: #CDDC39;
+  $color-600: #C0CA33;
+  $color-700: #AFB42B;
+  $color-800: #9E9D24;
+  $color-900: #827717;
+  $color-A100: #F4FF81;
+  $color-A200: #EEFF41;
+  $color-A400: #C6FF00;
+  $color-A700: #AEEA00;
+}
+
+@if $theme == 'Yellow' {
+  $color-50 : #FFFDE7;
+  $color-100: #FFF9C4;
+  $color-200: #FFF59D;
+  $color-300: #FFF176;
+  $color-400: #FFEE58;
+  $color-500: #FFEB3B;
+  $color-600: #FDD835;
+  $color-700: #FBC02D;
+  $color-800: #F9A825;
+  $color-900: #F57F17;
+  $color-A100: #FFFF8D;
+  $color-A200: #FFFF00;
+  $color-A400: #FFEA00;
+  $color-A700: #FFD600;
+}
+
+@if $theme == 'Amber' {
+  $color-50 : #FFF8E1;
+  $color-100: #FFECB3;
+  $color-200: #FFE082;
+  $color-300: #FFD54F;
+  $color-400: #FFCA28;
+  $color-500: #FFC107;
+  $color-600: #FFB300;
+  $color-700: #FFA000;
+  $color-800: #FF8F00;
+  $color-900: #FF6F00;
+  $color-A100: #FFE57F;
+  $color-A200: #FFD740;
+  $color-A400: #FFC400;
+  $color-A700: #FFAB00;
+}
+
+@if $theme == 'Orange' {
+  $color-50 : #FFF3E0;
+  $color-100: #FFE0B2;
+  $color-200: #FFCC80;
+  $color-300: #FFB74D;
+  $color-400: #FFA726;
+  $color-500: #FF9800;
+  $color-600: #FB8C00;
+  $color-700: #EF6C00;
+  $color-800: #E65100;
+  $color-900: #1A237E;
+  $color-A100: #FFD180;
+  $color-A200: #FFAB40;
+  $color-A400: #FF9100;
+  $color-A700: #FF6D00;
+}
+
+@if $theme == 'Deep_Orange' {
+  $color-50 : #FBE9E7;
+  $color-100: #FFCCBC;
+  $color-200: #FFAB91;
+  $color-300: #FF8A65;
+  $color-400: #FF7043;
+  $color-500: #FF5722;
+  $color-600: #F4511E;
+  $color-700: #E64A19;
+  $color-800: #D84315;
+  $color-900: #BF360C;
+  $color-A100: #FF9E80;
+  $color-A200: #FF6E40;
+  $color-A400: #FF3D00;
+  $color-A700: #DD2C00;
+}
+
+@if $theme == 'Grey' {
+  $color-50 : #FAFAFA;
+  $color-100: #F5F5F5;
+  $color-200: #EEEEEE;
+  $color-300: #E0E0E0;
+  $color-400: #BDBDBD;
+  $color-500: #9E9E9E;
+  $color-600: #757575;
+  $color-700: #616161;
+  $color-800: #424242;
+  $color-900: #212121;
+}
+
+@if $theme == 'Blue_Grey' {
+  $color-50 : #ECEFF1;
+  $color-100: #CFD8DC;
+  $color-200: #B0BEC5;
+  $color-300: #90A4AE;
+  $color-400: #78909C;
+  $color-500: #607D8B;
+  $color-600: #546E7A;
+  $color-700: #455A64;
+  $color-800: #37474F;
+  $color-900: #263238;
+}

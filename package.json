@@ -1,8 +1,12 @@
 {
   "name": "Datepicker",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A Vue.js project",
-  "author": "Jean Marc BRUNO <technique@edps.fr>",
+  "author": "Jean Marc BRUNO <bruno.jm@edps.fr>",
+  "contributors": [{
+    "name": "Paul AUBERTINr",
+    "email": "aubertin.pr@edps.fr"
+  }],
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -10,6 +14,20 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e"
   },
+  "main": "src/main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimibi/Datepicker"
+  },
+   "bugs": {
+     "url": "https://github.com/jimibi/Datepicker/issues"
+  },
+  "license": "MIT",
+  "keywords": [
+    "Vue.js",
+    "Datepicker",
+    "webpack"
+  ],
   "dependencies": {
     "babel-runtime": "^5.8.0",
     "moment": "^2.12.0",
