@@ -2,6 +2,7 @@
   .datepicker__container {
     position: relative;
   }
+
 </style>
 
 <template>

@@ -1,10 +1,9 @@
 <style lang="scss">
-
 /* Theme Material Design
 Red, Pink, Purple, Deep_Purple, Indigo, Blue, Light_Blue, Cyan, Teal, Green,
 Light_Green, Lime, Yellow, Amber, Orange, Deep_Orange, Brown, Grey.
 */
-$theme: 'Indigo';
+$theme: 'Yellow';
 @import '../../modules/colors';
 @import 'animations';
 
