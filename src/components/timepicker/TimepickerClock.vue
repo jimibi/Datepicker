@@ -3,270 +3,249 @@
 Red, Pink, Purple, Deep_Purple, Indigo, Blue, Light_Blue, Cyan, Teal, Green,
 Light_Green, Lime, Yellow, Amber, Orange, Deep_Orange, Brown, Grey.
 */
-$theme: 'Green';
+$theme: 'Blue';
 @import '../../modules/colors';
 @import '../datepicker/animations';
 
-  $time-size: 30em;
-  $time-margin: 0.2em;
+  $time-size: 25rem;
+  $time-margin: 0.1rem;
   $timepicker-width: $time-size + ($time-margin * 2);
-  $header-height: 6em;
+  $header-height: 6rem;
 
   .timepicker {
     position: absolute;
     width: $timepicker-width;
     top: 100%;
     z-index: 5;
-    font-size:62.5%; margin:1em;
-    background:#color-50;
-    box-shadow: 0 0.2em 0.8em rgba(0,0,0,0.25), 0 0.2em 0.3em rgba(0,0,0,0.22);
+    background: $color-50;
+    box-shadow: 0 1.4rem 4.5rem rgba(0,0,0,0.25), 0 1rem 1.8rem rgba(0,0,0,0.22);
   }
   .timepicker__header {
     background-color: $color-700;
     color: white;
-    padding: $time-margin $time-margin 0 $time-margin;
+    padding: $time-margin;
     height: $header-height;
   }
+  .timepicker__time {
+    position: relative;
+    //overflow: hidden;
+    font-size: 4rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    opacity: 0.8;
+  }
   ul {
-    list-style:none;
-    margin:0;
-    padding:0
+    list-style: none;
+    margin: 0;
+    padding: 0
   };
-  #watch { font-size:1em; position:relative };
+  #watch { font-size: 1rem; position: relative };
   #watch .frame-face {
-    position:relative;
-    width: 27em;
-    height: 27em;
-    margin: 2em auto;
-    border-radius: 20%;
-    background: linear-gradient(to bottom, #f9f9f9,#666);
-    box-shadow: rgba(0,0,0,.8) .5em .5em 4em;
+    position: relative;
+    width: 21rem;
+    height: 21rem;
+    margin: 3rem auto;
+    border-radius: 25%;
+    background: linear-gradient(to bottom, white, $color-100);
+    box-shadow: rgba(0,0,0,.8) .2rem .2rem 2rem;
   }
   #watch .frame-face:before {
-    content: '';
-    width: 26.5em;
-    height: 26.5em;
-    border-radius: 50%;
     position: absolute;
-    top: 0.2em;
-    left: 0.3em;
+    content: '';
+    width: 20.5rem;
+    height: 20.5rem;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
     background:
-      linear-gradient(135deg, rgba(246,248,249,0) 0%,rgba(229,235,238,1) 50%,rgba(205,212,217,1) 51%,rgba(245,247,249,0) 100%),
+      //linear-gradient(135deg, rgba(246,248,249,0) 0%,rgba(229,235,238,1) 50%,rgba(205,212,217,1) 51%,rgba(245,247,249,0) 100%),
       radial-gradient(ellipse at center, rgba(246,248,249,1) 0%,rgba(229,235,238,1) 65%,rgba(205,212,217,1) 66%,rgba(245,247,249,1) 100%);
     }
   #watch .frame-face:after {
-    content:'';
-    width: 23.5em;
-    height: 23.5em;
-    border-radius: 50%;
     position: absolute;
-    top: 1.8em;
-    left: 1.9em;
-    box-shadow: inset rgba(0,0,0,0.2) 0.2em 0.2em 1em;
-    border: 0.1em solid rgba(0,0,0,0.2);
+    content:'';
+    width: 19rem;
+    height: 19em;
+    border-radius: 50%;
+    top: .9rem;
+    left: .9rem;
+    box-shadow: inset rgba(0,0,0,0.2) 0.2rem 0.2rem 1rem;
+    border: 0.1rem solid rgba(0,0,0,0.3);
     background: linear-gradient(to bottom, #fff, #ccc);
   }
   #watch .minute-marks li {
-    display: block;
-    width: 0.3em;
-    height: 1.5em;
-    background: $color-600;
     position: absolute;
+    display: block;
+    width: .1rem;
+    height: 1.3rem;
+    background: $color-600;
     top: 50%;
     left: 50%;
-    margin: -0.6em 0 0 -0.1em;
+    margin: -0.6rem 0 0 -0.1rem;
   }
   #watch .minute-marks li:first-child {
-    transform: rotate(6deg) translateY(-12.7em);
+    transform: rotate(6deg) translateY(-6.7rem);
   }
   @for $i from 2 through 60 { // a voir
     @if ($i % 5) == 0 {
       #watch .minute-marks li:nth-child(#{$i}) {
-        transform: rotate(6deg * 5 * $i) translateY(-10.7em)
+        transform: rotate(6deg * 5 * $i) translateY(-6.7rem);
+        width: .3rem;
       }
     }
     @else {
       #watch .minute-marks li:nth-child(#{$i}) {
-        transform: rotate(6deg * $i) translateY(-12.7em)
+        transform: rotate(6deg * $i) translateY(-6.7rem);
       }
     }
   }
 
   #watch .digits {
-    width: 26em;
-    height: 26em;
-    border-radius: 13em;
     position: absolute;
-    top: 0;
-    left: 50%;
-    margin-left: -13em;
+    width: 21rem;
+    height: 21rem;
+    top:  -0.9rem;
+    left: 1.2rem;
   }
   #watch .digits li {
-    font-size: 1.8em;
-    display: block;
-    width: 1.8em;
-    height: 1.8em;
-    position:absolute;
-    top: 50%;
-    left: 50%;
+    position: absolute;
+    font-size: 1.2em;
     line-height: 1.6em;
-    text-align: center;
-    margin: -0.1em 0 0 -1.1em;
-    font-weight: bold;
-  }
-  #watch .digits li:nth-child(12) { transform:translate(0.2em, -7.4em) }
-  #watch .digits li:nth-child(6) { transform:translate(0.2em, 6.7em) }
-  #watch .digits li:nth-child(1) { transform:translate(3.7em, -6.4em) }
-  #watch .digits li:nth-child(11) { transform:translate(-3.2em, -6.4em) }
-  #watch .digits li:nth-child(3) { transform:translate(7.2em, -0.38em) }
-  #watch .digits li:nth-child(9) { transform:translate(-6.8em, -0.35em) }
-  #watch .digits li:nth-child(2) { transform:translate(6.3em, -3.8em) }
-  #watch .digits li:nth-child(10) { transform:translate(-5.8em, -3.8em) }
-  #watch .digits li:nth-child(4) { transform:translate(6.2em, 3.1em) }
-  #watch .digits li:nth-child(8) { transform:translate(-5.8em, 3.1em) }
-  #watch .digits li:nth-child(5) { transform:translate(3.7em, 5.8em) }
-  #watch .digits li:nth-child(7) { transform:translate(-3.2em, 5.7em) }
-  #watch .digits:before {
-    content:'';
+    display: block;
     width: 1.6em;
     height: 1.6em;
-    border-radius: 0.8em;
-    position: absolute;
     top: 50%;
     left: 50%;
-    margin: -.8em 0 0 -0.8em;
+    border-width: thin;
+    border-style: dotted;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+  }
+  #watch .digits li:nth-child(12) { transform:translate(0rem, -8.4rem) }
+  #watch .digits li:nth-child(6) { transform:translate(0rem, 8.4rem) }
+  #watch .digits li:nth-child(1) { transform:translate(4.2rem, -7.2rem) }
+  #watch .digits li:nth-child(11) { transform:translate(-4.2rem, -7.2rem) }
+  #watch .digits li:nth-child(3) { transform:translate(8.3rem, 0rem) }
+  #watch .digits li:nth-child(9) { transform:translate(-8.3rem, 0rem) }
+  #watch .digits li:nth-child(2) { transform:translate(7.2rem, -4.2rem) }
+  #watch .digits li:nth-child(10) { transform:translate(-7.2rem, -4.2rem) }
+  #watch .digits li:nth-child(4) { transform:translate(7.2rem, 4.2rem) }
+  #watch .digits li:nth-child(8) { transform:translate(-7.2rem, 4.2rem) }
+  #watch .digits li:nth-child(5) { transform:translate(4.2rem, 7.2rem) }
+  #watch .digits li:nth-child(7) { transform:translate(-4.2rem, 7.2rem) }
+  #watch .digits:before {
+    position: absolute;
+    content:'';
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    margin: -1rem 0 0 -1rem;
     background: $color-900;
   }
   #watch .digits:after {
-    content:'';
-    width: 4em;
-    height: 4em;
-    border-radius: 2.2em;
     position: absolute;
-    top: 52%;
+    content:'';
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    top: 100%;
     left: 50%;
-    margin: -2.1em 0 0 -2.1em;
-    border: 0.1em solid $color-100;
-    background:radial-gradient(ellipse at center, rgba(200,200,200,0), rgba(190,190,190,1) 90%, rgba(130,130,130,1) 100%);
+    margin: -2.1rem 0 0 -2.1rem;
+    border: 0.1rem solid $color-100;
+    background: radial-gradient(ellipse at center, rgba(200,200,200,0), rgba(190,190,190,1) 90%, rgba(130,130,130,1) 100%);
   }
   @keyframes hours { to {transform:rotate(0deg)} }
   #watch .hours-hand {
-    width: 0.8em;
-    height: 7em;
-    border-radius: 0 0 0.9em 0.9em;
-    background: $color-900;
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    margin: 0 0 -0.8em -0.4em;
-    box-shadow: #232425 0 0 2px;
-    transform-origin: 0.4em 6.2em;
-    transform: rotate(-0deg);
-    animation: hours 43200s linear 0s infinite;
+    width: 0.1rem;
+    height: 3.5rem;
+    border-radius: 0 0 0.9rem 0.9rem;
+    background: $color-900;
+    top: 20%;
+    left: 60%;
+    margin: 0 0 -0.5rem -0.4rem;
+    box-shadow: $color-100 0 0 2px;
+    transform-origin: 0.4rem 6.2rem;
+    // animation: hours 43200s linear 0s infinite;
+  }
+  .hour {
+    transform: rotate(90deg);
   }
   #watch .hours-hand:before {
+    position: absolute;
     content: '';
     background: inherit;
-    width :1.8em;
-    height: 0.8em;
-    border-radius: 0 0 0.8em 0.8em;
-    box-shadow: $color-900 0 0 1px;
-    position: absolute;
-    top: -0.7em;
-    left: -0.5em;
+    width :1.6rem;
+    height: 0.95rem;
+    border-radius: 0 0 0.8rem 0.8rem;
+    box-shadow: $color-900 0 0 2px;
+    top: -0.9rem;
+    left: -0.5rem;
   }
   #watch .hours-hand:after {
     content: '';
     width: 0;
-    height:0;
-    border: 0.9em solid $color-900;
-    border-width: 0 0.9em 2.4em 0.9em;
+    height: 0;
+    border: 0.6rem solid $color-900;
+    border-width: 0 0.95rem 2.3rem 0.9rem;
     border-left-color: transparent;
     border-right-color: transparent;
     position: absolute;
-    top: -3.1em;
-    left: -.5em;
+    top: -3.1rem;
+    left: -.5rem;
   }
-  @keyframes minutes { to {transform:rotate(422deg)} }
+  @keyframes minutes { to { transform:rotate(422deg) } }
   #watch .minutes-hand {
-    width: 0.8em;
-    height: 13em;
-    border-radius: 0.5em;
-    background: $color-900;
     position: absolute;
-    bottom: 48%;
+    width: 0.1rem;
+    height: 8rem;
+    border-radius: 0.25rem;
+    background: $color-900;
+    bottom: 50%;
     left: 50%;
-    margin: 0 0 -1.5em -0.4em;
+    margin: 0 0 0 0;
     box-shadow: $color-900 0 0 2px;
-    transform-origin: 0.4em 11em;
+    transform-origin: 0.4rem 11rem;
     transform: rotate(0deg);
-    animation: minutes 3600s linear 0s infinite;
   }
   @keyframes seconds { to {transform:rotate(480deg)} }
   #watch .seconds-hand {
-    width: 0.2em;
-    height: 14em;
-    border-radius: 0.1em 0.1em 0 0/10em 10em 0 0;
+    width: 0.2rem;
+    height: 14rem;
+    border-radius: 0.1rem 0.1rem 0 0/10rem 10rem 0 0;
     background: $color-400;
     position: absolute;
     bottom: 50%;
     left: 50%;
-    margin: 0 0 -2em -0.1em;
-    box-shadow :rgba(0,0,0,.8) 0 0 0.2em;
-    transform-origin: 0.1em 12em;
+    margin: 0 0 -2rem -0.1rem;
+    box-shadow :rgba(0,0,0,.8) 0 0 0.2rem;
+    transform-origin: 0.1rem 12rem;
     transform: rotate(0deg);
     animation: seconds 60s steps(60, end) 0s infinite;
   }
   #watch .seconds-hand:after {
     content: '';
-    width: 1.4em;
-    height: 1.4em;
-    border-radius: 0.7em;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 0.7rem;
     background: inherit;
     position: absolute;
-    left: -0.65em;
-    bottom: 1.35em;
+    left: -0.65rem;
+    bottom: 1.35rem;
   }
   #watch .seconds-hand:before {
+    position: absolute;
     content: '';
-    width: 0.8em;
-    height: 3em;
-    border-radius: 0.2em 0.2em 0.4em 0.4em/0.2em 0.2em 2em 2em;
-    box-shadow: rgba(0,0,0,.8) 0 0 0.2em;
+    width: 0.8rem;
+    height: 3rem;
+    border-radius: 0.2rem 0.2rem 0.4rem 0.4rem/0.2rem 0.2rem 2rem 2rem;
+    box-shadow: rgba(0,0,0,.8) 0 0 0.2rem;
     background: inherit;
-    position: absolute;
-    left: -0.35em;
-    bottom: -3em;
-  }
-  #watch .digital-wrap {
-    width: 9em;
-    height: 3.1em;
-    border: 0.1em solid black;
-    border-radius: 0.3em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: 3em 0 0 -4.5em;
-    overflow: hidden;
-    background: $color-100;
-    background: linear-gradient(to bottom, $color-400 0%, $color-900 100%);
-  }
-  #watch .digital-wrap ul {
-    float: left;
-    width: 2.85em;
-    height: 3em;
-    border-right: 0.1em solid black;
-    color: white;
-    font-family: Roboto, sans-serif;
-  }
-  #watch .digital-wrap ul:last-child { border:none }
-  #watch .digital-wrap li {
-    font-size: 1.6em;
-    line-height: 2;
-    letter-spacing: 2px;
-    text-align: center;
-    position: relative;
-    left: 1px;
+    left: -0.35rem;
+    bottom: -3rem;
   }
   #watch .digit-minutes li {
     animation: dsm 3600s steps(60, end) 0s infinite;
@@ -275,25 +254,15 @@ $theme: 'Green';
     animation: dsm 60s steps(60, end) 0s infinite;
   }
   @keyframes dsm {
-    to { transform:translateY(-120em) }
+    to { transform:translateY(-120rem) }
   }
-
-  .timepicker__days {
-    position: relative;
-    overflow: hidden;
-    margin: $time-margin $time-margin 0;
-    height: $time-size * 3;
-    transition: height 0.3s;
-    &.has-24-hour {
-      height: $time-size * 4;
-    }
-  }
-  .timepicker__hour {
+  .timepigcker__time { // a voir
     position: relative;
     width: $time-size;
     height: $time-size;
     float: left;
     text-align: center;
+    font-size: 10rem;
     line-height: $time-size;
     cursor: pointer;
     transition: color 450ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -403,7 +372,7 @@ $theme: 'Green';
   }
   .timepicker-slide-leave, .timepicker-slide-enter {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-1rem);
   }
 
 </style>
@@ -418,27 +387,14 @@ $theme: 'Green';
   <div id="watch">
     <div class="frame-face"></div>
     <ul class="minute-marks">
-      <template v-for="minute in minutes">
-        <li></li>
-      </template>
+      <template v-for="minute in minutes"><li></li></template>
     </ul>
-    <div class="digital-wrap">
-      <ul class="digit-hours">
-        <span v-for="hour in hours"><li>{{ ("00" + hour).slice(-2) }}</li></span>
-      </ul>
-      <ul class="digit-minutes">
-        <span v-for="minute in minutes"><li>{{ ("00" + minute).slice(-2) }}</li></span>
-      </ul>
-      <ul class="digit-seconds">
-        <span v-for="second in seconds"><li>{{ ("00" + second).slice(-2) }}</li></span>
-      </ul>
-    </div>
     <ul class="digits">
       <template v-for="heure in heures"><li>{{ heure }}</li></template>
     </ul>
-    <div class="hours-hand"></div>
+    <div class="hours-hand hour" :class="classHour"></div>
     <div class="minutes-hand"></div>
-    <div class="seconds-hand"></div>
+    <!--div class="seconds-hand"></div-->
   </div>
   <div class="timepicker__actions">
     <button @click="cancel">Annuler</button>
@@ -580,8 +536,11 @@ export default {
     classWeeks () {
       return 'has-' + this.month.getWeeks() + '-ampm'
     },
+    classHour (hour) {
+      return 'transform: rotate(120deg)'
+    },
     time_formatted () {
-      return this.time.format('hh mm')
+      return this.time.format('hh:mm:ss')
     }
   }
 }

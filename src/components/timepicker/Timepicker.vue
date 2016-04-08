@@ -47,7 +47,7 @@ export default {
   data () {
     return {
       isVisible: false,
-      time: moment(this.value, 'hh:mm')
+      time: moment(this.value, 'hh:mm:ss')
     }
   },
   computed: {

@@ -7,43 +7,43 @@ $theme: 'Yellow';
 @import '../../modules/colors';
 @import 'animations';
 
-  $day-size: 35px;
-  $day-margin: 14px;  // 14px min
+  $day-size: 3.5rem;
+  $day-margin: 1.4rem;
   $datepicker-width: ($day-size * 7) + ($day-margin * 2);
-  $header-height: 80px;
+  $header-height: 8rem;
 
   .datepicker {
     position: absolute;
     width: $datepicker-width;
+    font-size: 1.6rem;
     top: 100%;
     z-index: 5;
     background-color: $color-50;
-    box-shadow: 0 14px 45px rgba(0,0,0,0.25), 0 10px 18px rgba(0,0,0,0.22);
+    box-shadow: 0 1.4rem 4.5rem rgba(0,0,0,0.25), 0 1rem 1.8rem rgba(0,0,0,0.22);
   }
   .datepicker__header {
     background-color: $color-700;
     color: white;
-    padding: $day-margin 10px 0 20px;
+    padding: $day-margin 1rem 0 2rem;
     height: $header-height;
   }
   .datepicker__year {
     position: relative;
     overflow: hidden;
     opacity: 0.8;
-    height: 16px;
-    margin-bottom: 5px;
-    line-height: 16px
+    height: 2rem;
+    margin-bottom: .5rem;
+    line-height: 2rem
   }
   .datepicker__date {
     position: relative;
     overflow: hidden;
-    height: 32px;
-    font-size: 32px;
-    line-height: 32px;
+    height: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 3.2rem;
   }
   .datepicker__week {
-    font-size: 14px;
-    line-height: 14px;
+    line-height: 1rem;
     font-weight: bold;
     color: rgba(0,0,0,0.8);
     padding: 0 $day-margin;
@@ -80,8 +80,8 @@ $theme: 'Yellow';
     position: absolute;
     top: 2px;
     left: 2px;
-    width: 30px;
-    height: 30px;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     background-color: $color-600;
     transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -107,8 +107,8 @@ $theme: 'Yellow';
   }
   .datepicker__controls {
     position: relative;
-    height: 56px;
-    line-height: 56px;
+    height: 5.6rem;
+    line-height: 5.6rem;
     text-align: center;
     button {
       position: relative;
@@ -117,12 +117,12 @@ $theme: 'Yellow';
       user-select: none;
       outline: none;
       cursor: pointer;
-      width: 56px;
-      height: 56px;
+      width: 5.6rem;
+      height: 5.6rem;
     }
     svg {
-      width: 24px;
-      height: 24px;
+      width: 2.4rem;
+      height: 2.4rem;
       fill: rgba(0,0,0,0.87);
       vertical-align: middle;
     }
@@ -132,28 +132,28 @@ $theme: 'Yellow';
   }
   .datepicker__nextm {
     float: right;
-    left: 25px;
+    left: 2.5rem;
   }
   .datepicker__prev {
     float: left;
   }
   .datepicker__prevm {
-    left: -25px;
+    left: -2.5rem;
     float: left;
   }
   .datepicker__month {
     position: absolute;
-    height: 16px;
-    line-height: 16px;
+    height: 1.6rem;
+    line-height: 1.6rem;
     overflow: hidden;
-    top: 20px;
+    top: 2rem;
     left: 0;
     right: 0;
     bottom: 0;
   }
   .datepicker__actions {
     text-align: right;
-    padding: 8px;
+    padding: 0.8rem;
   }
   .datepicker__actions button {
     border: none;
@@ -161,12 +161,13 @@ $theme: 'Yellow';
     display: inline-block;
     cursor: pointer;
     outline: none;
-    color: $color-500;
-    font-size: 16px;
+    color: $color-700;
+    font-weight: bold;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 500;
-    min-width: 70px;
-    line-height: 30px;
+    min-width: 7rem;
+    line-height: 3rem;
     text-align: center;
     -webkit-appearance: none;
     transition: all 0.3s;
@@ -181,7 +182,7 @@ $theme: 'Yellow';
   }
   .datepicker-slide-leave, .datepicker-slide-enter {
     opacity: 0;
-    transform: translateY(-15px);
+    transform: translateY(-1.5rem);
   }
 
 </style>
@@ -226,7 +227,7 @@ $theme: 'Yellow';
     </div>
     <div class="datepicker__days" :class="classWeeks">
       <div v-for="month in [month]" transition="slidev" :class="classDirection">
-        <div class="datepicker__day" v-bind:style="{width: (month.getWeekStart() * 35) + 'px'}">
+        <div class="datepicker__day" v-bind:style="{width: (month.getWeekStart() * 3.5) + 'rem'}">
         </div>
         <div class="datepicker__day" @click="selectDate(day)" v-for="day in month.getDays()" :class="{selected: isSelected(day)}">
           <span class="datepicker__day__effect"></span>
